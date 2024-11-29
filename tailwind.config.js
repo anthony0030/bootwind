@@ -6,16 +6,10 @@ export default {
   ],
   theme: {
     extend: {
-      colors: {
-        custom: "#f79b4b",
-        customHover: "#e38a3c",
-      },
+      ...require("./src/theme/index.js"),
     },
   },
   plugins: [
-    require("./src/components/alerts.js"),
-    require("./src/components/buttons.js"),
-    require("./src/components/form.js"),
-    require("./src/components/pagy.js"),
+    require("./src/index.js"),
   ],
 }

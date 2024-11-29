@@ -1,5 +1,7 @@
+import { colord } from "colord";
+
 export default function ({ addComponents, theme }) {
-  const formStyles = {
+  const form = {
     ".form-group": {
       marginBottom: theme("spacing.4"),
     },
@@ -8,7 +10,7 @@ export default function ({ addComponents, theme }) {
       display: "block",
       fontSize: theme("fontSize.sm"),
       fontWeight: theme("fontWeight.medium"),
-      color: theme("colors.gray.700"),
+      color: theme("colors.secondary"),
       marginBottom: theme("spacing.2"),
     },
 
@@ -17,13 +19,13 @@ export default function ({ addComponents, theme }) {
       width: "100%",
       padding: `${theme("spacing.2")} ${theme("spacing.3")}`,
       borderWidth: "1px",
-      borderColor: theme("colors.gray.300"),
+      borderColor: theme("colors.secondary"),
       borderRadius: theme("borderRadius.md"),
       boxShadow: theme("boxShadow.sm"),
       outline: "none",
       "&:focus": {
-        ringColor: theme("colors.indigo.500"),
-        borderColor: theme("colors.indigo.500"),
+        ringColor: theme("colors.primary"),
+        borderColor: theme("colors.primary"),
       },
     },
 
@@ -36,7 +38,7 @@ export default function ({ addComponents, theme }) {
     ".form-check-input": {
       width: theme("spacing.4"),
       height: theme("spacing.4"),
-      color: theme("colors.blue.600"),
+      color: theme("colors.primary"),
       backgroundColor: theme("colors.gray.100"),
       borderColor: theme("colors.gray.300"),
       borderRadius: "50%",
@@ -47,21 +49,21 @@ export default function ({ addComponents, theme }) {
     },
 
     ".form-check-input:checked": {
-      backgroundColor: theme("colors.blue.600"),
-      borderColor: theme("colors.blue.600"),
+      backgroundColor: theme("colors.primary"),
+      borderColor: theme("colors.primary"),
     },
 
     ".form-check-label": {
       marginLeft: theme("spacing.2"),
       fontSize: theme("fontSize.sm"),
       fontWeight: theme("fontWeight.medium"),
-      color: theme("colors.gray.700"),
+      color: theme("colors.secondary"),
     },
 
     ".form-text": {
       marginTop: theme("spacing.1"),
       fontSize: theme("fontSize.xs"),
-      color: theme("colors.gray.500"),
+      color: theme("colors.secondary"),
     },
 
     ".form-select": {
@@ -74,8 +76,8 @@ export default function ({ addComponents, theme }) {
       boxShadow: theme("boxShadow.sm"),
       outline: "none",
       "&:focus": {
-        ringColor: theme("colors.indigo.500"),
-        borderColor: theme("colors.indigo.500"),
+        ringColor: theme("colors.primary"),
+        borderColor: theme("colors.primary"),
       },
       fontSize: theme("fontSize.sm"),
     },
@@ -103,16 +105,15 @@ export default function ({ addComponents, theme }) {
     ".required.form-label::after": {
       paddingLeft: theme("spacing.1"),
       content: '"*"',
-      color: theme("colors.red.600"),
+      color: theme("colors.danger"),
     },
 
     ".required .form-label::after": {
       paddingLeft: theme("spacing.1"),
       content: '"*"',
-      color: theme("colors.red.600"),
+      color: theme("colors.danger"),
     },
   };
 
-  // Wrap the styles inside `addComponents`
-  addComponents(formStyles);
+  addComponents(form);
 };

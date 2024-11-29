@@ -1,5 +1,7 @@
+import { colord } from "colord";
+
 export default function ({ addComponents, theme }) {
-  const paginationStyles = {
+  const pagy = {
     ".pagy .nav": {
       display: "inline-flex",
       flexWrap: "wrap",
@@ -8,13 +10,13 @@ export default function ({ addComponents, theme }) {
     },
 
     ".pagy .nav a:first-child": {
-      borderTopLeftRadius: theme("borderRadius.sm"),
-      borderBottomLeftRadius: theme("borderRadius.sm"),
+      borderTopLeftRadius: theme("borderRadius.md"),
+      borderBottomLeftRadius: theme("borderRadius.md"),
     },
 
     ".pagy .nav a:last-child": {
-      borderTopRightRadius: theme("borderRadius.sm"),
-      borderBottomRightRadius: theme("borderRadius.sm"),
+      borderTopRightRadius: theme("borderRadius.md"),
+      borderBottomRightRadius: theme("borderRadius.md"),
     },
 
     ".pagy .nav a:not(.gap)": {
@@ -28,28 +30,24 @@ export default function ({ addComponents, theme }) {
       fontFeatureSettings: "'tnum' on",
       marginLeft: "-1px",
       "&:hover": {
-        backgroundColor: theme("colors.gray.200"),
-        "@apply dark:bg-gray-700": {},  // Dark mode
+        backgroundColor: theme("colors.secondary"),
       },
-      "@apply dark:bg-gray-800 dark:text-gray-200 dark:border-gray-600": {},
     },
 
     ".pagy .nav a[aria-current='page'].current": {
       zIndex: 10,
-      borderColor: theme("colors.blue.500"),
-      backgroundColor: theme("colors.blue.500"),
+      borderColor: theme("colors.primary"),
+      backgroundColor: theme("colors.primary"),
       color: theme("colors.white"),
-      "@apply dark:bg-blue-800 dark:text-gray-200 dark:border-blue-600": {},
       marginLeft: "-1px",
     },
 
     ".pagy .nav a:not([href])": {
       backgroundColor: theme("colors.white"),
-      color: theme("colors.gray.500"),
-      "@apply dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600": {},
+      color: theme("colors.secondary"),
       marginLeft: "-1px",
     },
   };
 
-  addComponents(paginationStyles);
+  addComponents(pagy);
 };

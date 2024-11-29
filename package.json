@@ -1,8 +1,8 @@
 {
-  "name": "@bootwind/bootwind",
-  "private": false,
-  "version": "1.0.0",
+  "name": "@anthony0030/bootwind",
+  "version": "0.0.1",
   "type": "module",
+  "license": "UNLICENSED",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
@@ -11,14 +11,32 @@
   },
   "devDependencies": {
     "autoprefixer": "^10.4.20",
+    "colord": "^2.9.3",
     "postcss": "^8.4.49",
     "tailwindcss": "^3.4.15",
     "vite": "^6.0.1"
   },
   "exports": {
-    ".": "./src/components/index.js",
-    "./buttons": "./src/components/buttons.js",
-    "./form": "./src/components/form.js"
+    ".": "./src/index.js",
+
+    "./base": "./src/base/index.js",
+
+    "./theme": "./src/theme/index.js",
+    "./theme/borderRadius": "./src/theme/borderRadius.js",
+    "./theme/colors": "./src/theme/colors.js",
+    "./theme/container": "./src/theme/container.js",
+    "./theme/content": "./src/theme/content.js",
+
+    "./components": "./src/components/index.js",
+    "./components/alerts": "./src/components/alerts.js",
+    "./components/buttons": "./src/components/buttons.js",
+    "./components/form": "./src/components/form.js",
+    "./components/pagy": "./src/components/pagy.js",
+
+    "./utilities": "./src/utilities/index.js"
   },
-  "packageManager": "yarn@1.22.19+sha1.4ba7fc5c6e704fce2066ecbfb0b0d8976fe62447"
+  "packageManager": "yarn@1.22.19+sha1.4ba7fc5c6e704fce2066ecbfb0b0d8976fe62447",
+  "peerDependencies": {
+    "colord": "^2.9.3"
+  }
 }
